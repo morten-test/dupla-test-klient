@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "d522f5c4-af3d-4980-bf16-eb6e1a819583",
 		"name": "Vejledning",
-		"description": "**Generelt**\n\nDenne collection er til import i Postman og kan bruges til at teste requests mod Dupla services med et java web token(jwt). Den kan bla. bruges til at verificere hvordan et system skal kalde mod Dupla.\n\nFolderen Token indeholder ét request der giver et jwt der gemmes i en global parameter kaldet token. Dette token(jwt) kan bruges mod alle requests i denne collection.\n\nFolderen Services indeholder subfoldere for hver service i Dupla med tilgængelige requests og API specifikation for hver service.\n\nHver request indeholder krævede og mulige parametre og headere.\n\n**Opsætning**\n\nInstaller Postman([https://www.postman.com/](https://www.postman.com/)) og opret et workspace(knappen New).\n\nI det oprettede workspace importeres filen Vejledning.json.\n\nFor at benytte den importerede collection skal der tilføjes et voces certifikat. Alle benyttede aftaler er tilknyttet et offentligt tilgængeligt voces certifikat fra Nets([https://www.nets.eu/dk-da/kundeservice/nemid-tjenesteudbyder/NemID-tjenesteudbyderpakken/Pages/OCES-II-certifikat-eksempler.aspx](https://www.nets.eu/dk-da/kundeservice/nemid-tjenesteudbyder/NemID-tjenesteudbyderpakken/Pages/OCES-II-certifikat-eksempler.aspx)).\n\nDownload DanID Test (gyldig) under Virksomhedscertifikater.\n\nI settings i Postman vælges Certificates og derefter Add certificate.\n\nI host skrives oces.billetautomat.tfe.skat.dk, vælg Select file ved PKX file og indsæt det downloadede certitikat, indtast Test1234 i Passphrase og tryk på knappen Add.\n\nKald requestet Hent token i folderen Token og kald derefter det ønskede request for en service.",
+		"description": "**Generelt**\n\nDenne collection er til import i Postman og kan bruges til at teste requests mod Dupla services med et java web token (jwt). Den kan bla. bruges til at verificere hvordan et system skal kalde mod Dupla.\n\nFolderen Token indeholder ét request der giver et jwt der gemmes i en global parameter kaldet token. Dette token(jwt) kan bruges mod alle requests i denne collection.\n\nFolderen Services indeholder subfoldere for hver service i Dupla med tilgængelige requests og API specifikation for hver service.\n\nHver request indeholder krævede og mulige parametre og headere.\n\n**Opsætning**\n\nInstaller Postman([https://www.postman.com/](https://www.postman.com/)) og opret et workspace(knappen New).\n\nI det oprettede workspace importeres filen Vejledning.json.\n\nFor at benytte den importerede collection skal der tilføjes et voces certifikat. Alle benyttede aftaler er tilknyttet et offentligt tilgængeligt voces certifikat fra Nets([https://www.nets.eu/dk-da/kundeservice/nemid-tjenesteudbyder/NemID-tjenesteudbyderpakken/Pages/OCES-II-certifikat-eksempler.aspx](https://www.nets.eu/dk-da/kundeservice/nemid-tjenesteudbyder/NemID-tjenesteudbyderpakken/Pages/OCES-II-certifikat-eksempler.aspx)).\n\nDupla stiller et testcertifikat tilrådighed i dette Github repo: DUPLA-Test.p12.\n\nI settings i Postman vælges Certificates og derefter Add certificate.\n\nI host skrives oces.billetautomat.tfe.skat.dk, vælg Select file ved PKX file og indsæt det downloadede certitikat, indtast t;Of.U3ILO09 i Passphrase og tryk på knappen Add.\n\nKald requestet Hent token i folderen Token og kald derefter det ønskede request for en service.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "10434153"
 	},
@@ -39,11 +39,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://oces.billetautomat-uat.skat.dk/auth/realms/oces/certificates/cert",
+							"raw": "https://oces.billetautomat.tfe.skat.dk/auth/realms/oces/certificates/cert",
 							"protocol": "https",
 							"host": [
 								"oces",
-								"billetautomat-uat",
+								"billetautomat",
+								"tfe",
 								"skat",
 								"dk"
 							],
@@ -682,7 +683,7 @@
 								"header": [
 									{
 										"key": "UFST-Adgangsgrundlag",
-										"value": "urn:ufst:adgangsgrundlag:aftale:36eed29f-4390-453a-91c8-a0c60a75a264",
+										"value": "urn:ufst:adgangsgrundlag:aftale:5035d362-30ba-4f26-92a8-7cdb87dc646d",
 										"type": "text"
 									},
 									{

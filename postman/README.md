@@ -23,10 +23,10 @@ For at benytte den importerede collection skal der tilføjes et VOCES certifikat
 Alle benyttede aftaler er tilknyttet et offentligt tilgængeligt VOCES
 certifikat fra [Nets](https://www.nets.eu/dk-da/kundeservice/nemid-tjenesteudbyder/NemID-tjenesteudbyderpakken/Pages/OCES-II-certifikat-eksempler.aspx).
 
-Download DanID Test (gyldig) under Virksomhedscertifikater.
+Dupla stiller også et testcertifikat til rådighed, som forefindes i dette github repo: DUPLA-Test.p12. 
 
 I settings i Postman vælges Certificates og derefter Add certificate.
 
-I host skrives oces.billetautomat.tfe.skat.dk, vælg Select file ved PFX file og indsæt det downloadede certitikat, indtast Test1234 i Passphrase og tryk på knappen Add.
+I host skrives oces.billetautomat.tfe.skat.dk, vælg Select file ved PFX file og indsæt det downloadede certitikat, indtast t;Of.U3ILO09 i Passphrase og tryk på knappen Add.
 
 Kald requestet Hent token i folderen Token og kald derefter det ønskede request for en service.
